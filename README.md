@@ -82,6 +82,9 @@ VCC	5V
 GND	GND
 AO	Arduino Pin A0
 
+#OUTPUT:
+<img width="1919" height="914" alt="Image" src="https://github.com/user-attachments/assets/1052c8ff-c950-4e0a-8abd-12002c12afab" />
+<img width="1919" height="910" alt="Image" src="https://github.com/user-attachments/assets/b2c6b4f9-ee23-451c-b2bc-92dbb87e7b71" />
 
 
 ---
