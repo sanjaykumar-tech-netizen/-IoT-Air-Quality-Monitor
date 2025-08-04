@@ -1,0 +1,28 @@
+#include <DHT.h>
+
+#define DHTPIN 2
+#define DHTTYPE DHT22
+#define MQ135_PIN A0
+
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() {
+  Serial.begin(9600);
+  dht.begin();
+  Serial.println("Air Quality Monitoring System");
+}
+
+void loop() {
+  float temperature = dht.readTemperature();
+  float humidity = dht.readHumidity();
+  int gasValue = analogRead(MQ135_PIN); // Simulated gas reading
+
+  Serial.print("Temp: ");
+  Serial.print(temperature);
+  Serial.print("°C  |  Humidity: ");
+  Serial.print(humidity);
+  Serial.print("%  |  Air Quality (Raw): ");
+  Serial.println(gasValue);
+
+  delay(2000); // 2-second delay between readings
+}
